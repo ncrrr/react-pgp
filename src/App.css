@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+
+.bi-check {
+  margin: auto 10px;
+  color: green;
+  font-size: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  label {
+    text-align: right;
+  }
+}
