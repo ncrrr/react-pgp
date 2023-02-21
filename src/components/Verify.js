@@ -15,8 +15,13 @@ class Verify extends Component {
         const {text, key} = this.state;
 
         try {
-            // start worker
-            await openpgp.initWorker({ path: 'lib/openpgp.worker.js' });
+            try {
+                // start worker
+                await openpgp.initWorker({ path: 'lib/openpgp.worker.js' });
+            } catch (error) {
+                alert(error.message)
+                return;
+            }
 
             const publicKeys = (await openpgp.key.readArmored(key)).keys
 

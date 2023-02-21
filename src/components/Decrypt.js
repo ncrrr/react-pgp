@@ -18,8 +18,13 @@ class Decrypt extends Component {
         const {text, key, passphrase} = this.state;
 
         try {
-            // start worker
-            await openpgp.initWorker({ path: 'lib/openpgp.worker.js' });
+            try {
+                // start worker
+                await openpgp.initWorker({ path: 'lib/openpgp.worker.js' });
+            } catch (error) {
+                alert(error.message)
+                return;
+            }
     
             // decrypt key
             const {keys: [privateKey]} = await openpgp.key.readArmored(key);

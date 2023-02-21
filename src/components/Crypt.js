@@ -21,9 +21,13 @@ class Crypt extends Component {
         const {text, key, signingOption, signingKey, passphrase} = this.state;
 
         try {
-            let clearText = text;
-            // start worker
-            await openpgp.initWorker({ path: 'lib/openpgp.worker.js' });
+            try {
+                // start worker
+                await openpgp.initWorker({ path: 'lib/openpgp.worker.js' });
+            } catch (error) {
+                alert(error.message)
+                return;
+            }
 
             // encryption params
             const params = {
