@@ -1,0 +1,25 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb"
+    ],
+    "overrides": [
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "indent": ["error", 4],
+        "react/jsx-indent": [2, 4],
+        "react/jsx-max-props-per-line": [1, { "maximum": 10, "when": "multiline" }],
+        "react/jsx-indent-props": [2, 4]
+    }
+}

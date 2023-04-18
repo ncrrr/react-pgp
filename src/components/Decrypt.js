@@ -47,21 +47,35 @@ class Decrypt extends Component {
         return (
             <div id="crypt">
                 <div className="card-body">
+                    <br/>
                     <form onSubmit={this.decrypt}>
-                        <div className="row form-group">
-                            <label className="form-label col-sm-12 col-md-2" htmlFor="textDecrypt">Text to decrypt</label>
-                            <textarea name="textDecrypt" id="textDecrypt" rows="10" className="form-control col-sm-12 col-md-10" value={text} onChange={(e) => this.setState({text: e.target.value})}></textarea>
+                        <div className="row">
+                            <div className="col-sm-12 col-md-6">
+                                <div className="form-group">
+                                    <label className="form-label" htmlFor="textDecrypt">Text to decrypt</label>
+                                    <textarea name="textDecrypt" id="textDecrypt" rows="10" className="form-control" value={text} onChange={(e) => this.setState({text: e.target.value})}></textarea>
+                                </div>
+                            </div>
+                            <div className="col-sm-12 col-md-6">
+                                <div className="form-group">
+                                    <label className="form-label" htmlFor="keyDecrypt">Private key</label>
+                                    <textarea name="keyDecrypt" id="keyDecrypt" rows="10" className="form-control" value={key} onChange={(e) => this.setState({key: e.target.value})}></textarea>
+                                </div>
+                            </div>
                         </div>
-                        <div className="row form-group">
-                            <label className="form-label col-sm-12 col-md-2" htmlFor="keyDecrypt">Private key</label>
-                            <textarea name="keyDecrypt" id="keyDecrypt" rows="10" className="form-control col-sm-12 col-md-10" value={key} onChange={(e) => this.setState({key: e.target.value})}></textarea>
-                        </div>
-                        <div className="row form-group">
-                            <label className="form-label col-sm-12 col-md-2" htmlFor="passphrase">Passphrase</label>
-                            <input type="password" name="passphrase" id="passphrase" className="form-control col-sm-12 col-md-10" value={passphrase} onChange={(e) => this.setState({passphrase: e.target.value})} />
-                        </div>
-                        <div className="form-group">
-                            <button type="submit" className="btn btn-success right">Decrypt</button>
+                        <br/>
+                        <div className="row">
+                            <div className="col-sm-12 col-md-6">
+                                <div className="form-group">
+                                    <label className="form-label" htmlFor="passphrase">Passphrase</label>
+                                    <input type="password" name="passphrase" id="passphrase" className="form-control" value={passphrase} onChange={(e) => this.setState({passphrase: e.target.value})} />
+                                </div>
+                            </div>
+                            <div className="col-sm-12 col-md-6">
+                                <div className="form-group">
+                                    <button type="submit" className="btn btn-success right">Decrypt</button>
+                                </div>
+                            </div>
                         </div>
                         {result && <React.Fragment>
                             <div className="row form-group">
