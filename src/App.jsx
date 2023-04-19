@@ -1,8 +1,5 @@
 import React from 'react';
-import MainAccordion from './components/MainAccordion';
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.min.js';
 import TabMenu from './components/menu/TabMenu';
 
 export default function App() {
@@ -13,9 +10,10 @@ export default function App() {
                 <h3>by OxiD</h3>
             </header>
 
-            <div className="container">
+            <br />
+
+            <div className="container" style={{ marginBottom: '50px' }}>
                 <TabMenu />
-                <MainAccordion />
             </div>
 
             <div className="footer">

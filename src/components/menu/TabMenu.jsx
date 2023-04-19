@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import { Tab, Tabs } from 'react-bootstrap';
 import Crypt from '../tabs/Crypt';
+import Decrypt from '../tabs/Decrypt';
+import Signing from '../tabs/Signing';
+import Verify from '../tabs/Verify';
+import Help from '../tabs/Help';
 
 export default function TabMenu() {
     const [currentTab, setCurrentTab] = useState(1);
@@ -15,13 +19,16 @@ export default function TabMenu() {
                 <Crypt />
             </Tab>
             <Tab eventKey="2" title="Decrypt">
-                <p>profile</p>
+                <Decrypt />
             </Tab>
             <Tab eventKey="3" title="Signing">
-                <p>contact</p>
+                <Signing />
             </Tab>
             <Tab eventKey="4" title="Verify">
-                <p>contact</p>
+                <Verify />
+            </Tab>
+            <Tab eventKey="5" title="Help">
+                <Help />
             </Tab>
         </Tabs>
     );
