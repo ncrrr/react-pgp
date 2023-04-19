@@ -75,11 +75,13 @@ export default function Decrypt() {
     return (
         <Container>
             <Form onSubmit={decryptText}>
+                <br />
                 <Row>
                     <Col>
                         <p>Used to decrypt a GPG message block into clear text using a private key</p>
                     </Col>
                 </Row>
+                <hr />
                 <Row>
                     <Col>
                         <FormGroup>

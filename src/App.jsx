@@ -7,7 +7,11 @@ export default function App() {
         <div className="App">
             <header className="App-header">
                 <h1>PGPTools</h1>
-                <h3>by OxiD</h3>
+                <h3>
+                    by
+                    {' '}
+                    <a href="https://github.com/ncrrr" target="_blank" rel="noreferrer">ncrrr</a>
+                </h3>
             </header>
 
             <br />

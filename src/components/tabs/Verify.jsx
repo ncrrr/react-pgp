@@ -66,6 +66,13 @@ export default function Verify() {
     return (
         <Container>
             <Form onSubmit={verifyText}>
+                <br />
+                <Row>
+                    <Col>
+                        <p>Used to verify if a signed message has been signed by a given public key</p>
+                    </Col>
+                </Row>
+                <hr />
                 {renderResult()}
                 <Row>
                     <Col>

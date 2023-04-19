@@ -38,11 +38,13 @@ export default function Signing() {
     return (
         <Container>
             <Form onSubmit={signText}>
+                <br />
                 <Row>
                     <Col>
                         <p>Used to sign clear text with a private key to prove identity of a clear message</p>
                     </Col>
                 </Row>
+                <hr />
                 <Row>
                     <Col>
                         <FormGroup>

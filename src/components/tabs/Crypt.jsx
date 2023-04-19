@@ -48,11 +48,13 @@ export default function Crypt() {
     return (
         <Container>
             <Form onSubmit={cryptText}>
+                <br />
                 <Row>
                     <Col>
                         <p>Used to crypt clear text to PGP message block</p>
                     </Col>
                 </Row>
+                <hr />
                 <Row>
                     <Col>
                         <FormGroup>
